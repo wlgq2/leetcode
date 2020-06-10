@@ -33,9 +33,8 @@ public:
     {
         cache_.clear();
         ListNode* rst(nullptr);
-        std::vector<ListNode*> indexs(lists);
         
-        for (auto& list : indexs)
+        for (auto& list : lists)
         {
             auto current = list;
             while (current != NULL)
