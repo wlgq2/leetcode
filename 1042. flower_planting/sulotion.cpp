@@ -18,10 +18,10 @@ struct Graph
     std::vector<std::list<int>> paths;
 };
 
-class Solution 
+class Solution
 {
 public:
-    int getColor( Graph& graph,int other, int index, std::vector<int>& colors)
+    int getColor(Graph& graph, int other, int index, std::vector<int>& colors)
     {
         int rst;
         for (rst = 1;rst < 5;rst++)
@@ -37,12 +37,12 @@ public:
                     break;
                 }
             }
-            if(vaild)
+            if (vaild)
                 break;
         }
         return rst;
     }
-    vector<int> gardenNoAdj(int N, vector<vector<int>>& paths) 
+    vector<int> gardenNoAdj(int N, vector<vector<int>>& paths)
     {
         Graph graph(N);
         for (auto& path : paths)
@@ -70,7 +70,7 @@ public:
                     {
                         rst[*it] = getColor(graph, rst[index], *it, rst);
                         cache.push(*it);
-                    }   
+                    }
                 }
                 if (cache.empty())
                     break;
