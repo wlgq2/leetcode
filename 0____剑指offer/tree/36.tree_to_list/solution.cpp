@@ -6,7 +6,6 @@ public:
         if (node == NULL)
             return NULL;
         auto rst = treeToDoublyList(node->left,current,head);
-        std::cout << node->val << std::endl;;
         if (head == NULL && node->left == NULL)
         {
             head = node;
